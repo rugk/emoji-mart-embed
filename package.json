@@ -1,0 +1,23 @@
+{
+  "name": "awesome-emoji-emoji-mart-embed",
+  "version": "1.0.0",
+  "description": "Uses Preact and remount to provide emoji-mart in plain JavaScript.",
+  "main": "src.js",
+  "scripts": {
+    "clean": "rm dist/bundle.js",
+    "build": "npm run build-prod",
+    "build-prod": "webpack --mode production --config webpack.config.js",
+    "build-dev": "webpack --mode development --config webpack.config.js"
+  },
+  "author": "rugk",
+  "license": "ISC",
+  "dependencies": {
+    "emoji-mart": "^2.10.0",
+    "preact": "^10.0.0-alpha.2",
+    "remount": "^0.9.5"
+  },
+  "devDependencies": {
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  }
+}
