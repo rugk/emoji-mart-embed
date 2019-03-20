@@ -2,6 +2,8 @@ import { Picker } from 'emoji-mart/dist-modern/index.js'
 import React from 'react'
 import { define } from 'remount/es6'
 
+console.log("init");
+
 function main(properties) {
   console.log("given props", properties);
 
