@@ -25,7 +25,7 @@ async function defineEmojiMartElement(customElementName, properties) {
     });
   }
 
-  define({ customElementName: {
+  define({ [customElementName]: {
     component: PickerPrepared,
     attributes: ['set', 'native', 'title', 'showPreview']
   }});
