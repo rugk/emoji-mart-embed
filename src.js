@@ -1,3 +1,4 @@
+import 'emoji-mart/css/emoji-mart.css'
 import { Picker } from 'emoji-mart/dist-modern/index.js'
 import React from 'react'
 import { define } from 'remount/es6'

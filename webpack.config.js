@@ -1,10 +1,5 @@
 module.exports = {
     devtool: "source-map",
-    entry: {
-        vendor: [
-          'emoji-mart/css/emoji-mart.css'
-        ]
-    },
     output: {
         filename: 'emoji-mart.js'
     },
