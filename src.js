@@ -1,13 +1,8 @@
-import 'emoji-mart/css/emoji-mart.css'
 import { Picker } from 'emoji-mart/dist-modern/index.js'
 import React from 'react'
 import { define } from 'remount/es6'
 
-console.log("init");
-
-function main(properties) {
-  console.log("given props", properties);
-
+async function defineEmojiMartElement(customElementName, properties) {
   const PickerPrepared = (interactiveProperties) => {
     // filter null values
     for (const element in interactiveProperties) {
@@ -16,12 +11,9 @@ function main(properties) {
       }
     }
 
-    console.log("new props:", interactiveProperties);
-
     return React.createElement(Picker, {
       // defaults
-      set: 'twitter',
-      native: false,
+      native: true,
       onSelect: emoji => console.log('emoji selected', emoji),
       title: 'Emoji',
       showPreview: false,
@@ -33,15 +25,11 @@ function main(properties) {
     });
   }
 
-  define({ 'emoji-picker': {
+  define({ customElementName: {
     component: PickerPrepared,
     attributes: ['set', 'native', 'title', 'showPreview']
   }});
-
-  const picker = document.createElement('emoji-picker')
-  document.body.appendChild(picker)
 }
 
 // export as global
-window.emojiMart = main;
-
+window.defineEmojiMartElement = defineEmojiMartElement;
