@@ -1,4 +1,4 @@
-awesome-emoji-emoji-mart-embed
+emoji-mart-embed
 =====
 
 Provides [emoji-mart](https://github.com/missive/emoji-mart) in plain JavaScript. This uses [remount](https://github.com/rstacruz/remount) and [preact](https://github.com/developit/preact).
