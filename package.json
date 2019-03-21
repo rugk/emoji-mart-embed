@@ -1,5 +1,5 @@
 {
-  "name": "awesome-emoji-emoji-mart-embed",
+  "name": "emoji-mart-embed",
   "version": "1.0.0",
   "description": "Uses Preact and remount to provide emoji-mart in plain JavaScript.",
   "main": "src.js",
@@ -7,7 +7,7 @@
     "clean": "rm -rf dist",
     "build": "npm run build-prod",
     "build-prod": "webpack --mode production --config webpack.config.js",
-    "build-dev": "webpack --mode development --config webpack.config.js"
+    "build-dev": "webpack --mode development --config webpack.config.js",
     "legal": "npx npm-license-text . THIRD_PARTY_LICENSES.md"
   },
   "author": "rugk",
