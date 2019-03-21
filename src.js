@@ -19,8 +19,6 @@ const ElmAdapter = {
     mount({ component }, mountPoint, props) {
         // This function will be called on the first appearance of the custom
         // element.
-        component.embed(mountPoint, props)
-
         console.log("mount", { component }, mountPoint, props);
     },
     update({ component }, mountPoint, props) {
