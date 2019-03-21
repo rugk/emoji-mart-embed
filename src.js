@@ -10,30 +10,6 @@ import React from 'react'
 import { define } from 'remount/es6'
 
 /**
- * Custom adapter for remount.
- *
- * @private
- * @type {Object}
- */
-const ElmAdapter = {
-    mount({ component }, mountPoint, props) {
-        // This function will be called on the first appearance of the custom
-        // element.
-        console.log("mount", { component }, mountPoint, props);
-    },
-    update({ component }, mountPoint, props) {
-        // This function will be called on any subsequent updates afterwards (ie,
-        // if attributes were changed).
-        console.log("update", { component }, mountPoint, props);
-    },
-    unmount({ component }, mountPoint) {
-        // This function will be called when a custom element is removed from the
-        // DOM (eg, `parent.removeChild()`).
-        console.log("unmount", { component }, mountPoint, props);
-    }
-}
-
-/**
  * Create the HTML custom element for emoji-mart,
  *
  * @private
@@ -71,8 +47,7 @@ async function defineEmojiMartElement(
 
   define({ [customElementName]: {
     component: PickerPrepared,
-    attributes: customAttributes,
-    adapter: ElmAdapter
+    attributes: customAttributes
   }});
 }
 
