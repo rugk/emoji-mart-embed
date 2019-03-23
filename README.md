@@ -1,5 +1,4 @@
-emoji-mart-embed
-=====
+# emoji-mart-embed
 
 Provides [emoji-mart](https://github.com/missive/emoji-mart) in plain JavaScript. This uses [remount](https://github.com/rstacruz/remount) and [preact](https://github.com/developit/preact).
 
@@ -42,5 +41,5 @@ document.body.appendChild(picker);
 
 ## Credits
 
-Loosely based on https://github.com/nolanlawson/emoji-mart-outside-react, so thanks to [@nolanlawson](https://github.com/nolanlawson/emoji-mart-outside-react/commits?author=nolanlawson).
+Loosely based on https://github.com/nolanlawson/emoji-mart-outside-react, so thanks to [@nolanlawson](https://github.com/nolanlawson).
 
