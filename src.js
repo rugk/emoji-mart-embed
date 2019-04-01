@@ -5,7 +5,7 @@
  * @module emoji-mart-embed
  */
 
-import { Picker, store } from 'emoji-mart/dist-modern/index.js'
+import { Picker, store, emojiIndex, getEmojiDataFromNative } from 'emoji-mart/dist-modern/index.js'
 import React from 'react'
 import { define } from 'remount/es6'
 
@@ -70,6 +70,7 @@ function setDataStore(dataStore) {
 // export as global
 window.emojiMart = {
     definePicker,
-    setDataStore
+    setDataStore,
+    getEmojiDataFromNative,
+    emojiIndex
 };
-

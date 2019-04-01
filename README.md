@@ -41,6 +41,16 @@ const picker = document.createElement("emoji-picker");
 document.body.appendChild(picker);
 ```
 
+### Headless search
+
+As [with upstream](https://github.com/missive/emoji-mart#headless-search) you can use the emoji-index. Just use `window.emojiMart.emojiIndex` instead.
+
+### Get emoji data from Native
+
+Basically the same as [the upstream project](https://github.com/missive/emoji-mart#get-emoji-data-from-native), just use `window.emojiMart.getEmojiDataFromNative` instead.
+
+TODO: Needs testing!
+
 ### Storage
 
 It also exposes the storage of emoji-mart, [so you can use it in the same way as the original docs](https://github.com/missive/emoji-mart#storage):
