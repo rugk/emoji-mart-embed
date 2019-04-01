@@ -13,7 +13,7 @@
   "author": "rugk",
   "license": "ISC",
   "dependencies": {
-    "emoji-mart": "^2.10.0",
+    "emoji-mart": "^2.11.0",
     "preact": "^10.0.0-alpha.2",
     "remount": "^0.9.5"
   },
