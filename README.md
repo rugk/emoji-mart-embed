@@ -1,6 +1,6 @@
 # emoji-mart-embed
 
-Provides [emoji-mart](https://github.com/missive/emoji-mart) in plain JavaScript. This uses [remount](https://github.com/rstacruz/remount) and [preact](https://github.com/developit/preact).
+Provides [emoji-mart](https://github.com/missive/emoji-mart), so it can be used in plain JavaScript. This uses [remount](https://github.com/rstacruz/remount) and [preact](https://github.com/developit/preact).
 
 In the end, you just have a custom element:
 
@@ -22,21 +22,39 @@ All Emoji JSON data is included in the JS, and there is also the CSS file.
 
 Include the JS and CSS.
 
+### EmojiPicker
+
 Then, you can define the emoji-mart EmojiPicker like this:
 
 ```js
-window.defineEmojiMartElement("emoji-picker", {
-       native: true,
-       emojiTooltip: true,
-  });
+window.emojiMart.definePicker("emoji-picker", {
+     native: true,
+     emojiTooltip: true,
+});
 ```
 
-You can poass in a JSON, which is directly passed to [the picker of emoji-mart](https://github.com/missive/emoji-mart#user-content-picker).
+You can pass in a JSON, which is directly passed to [the picker of emoji-mart](https://github.com/missive/emoji-mart#user-content-picker) (only some little defaults are provided).
 
 Afterwards, you can create the [HTML custom element](https://developer.mozilla.org/docs/Web/Web_Components/Using_custom_elements):
 ```js
 const picker = document.createElement("emoji-picker");
 document.body.appendChild(picker);
+```
+
+### Storage
+
+It also exposes the storage of emoji-mart, [so you can use it in the same way as the original docs](https://github.com/missive/emoji-mart#storage):
+
+```js
+window.emojiMart.setDataStore("emoji-picker", {
+    getter: (key) => {
+        // Get from your own storage (sync)
+    },
+
+    setter: (key, value) => {
+        // Persist in your own storage (can be async)
+    }
+});
 ```
 
 ## Credits
