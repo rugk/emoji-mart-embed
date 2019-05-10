@@ -6,6 +6,7 @@
  */
 
 import { Picker, store, emojiIndex, getEmojiDataFromNative } from 'emoji-mart/dist-modern/index.js'
+import allEmojiData from 'emoji-mart/data/all.json'
 import React from 'react'
 import { define } from 'remount/es6'
 
@@ -67,10 +68,27 @@ function setDataStore(dataStore) {
     return store.setHandlers(dataStore);
 }
 
+/**
+ * Override real getEmojiDataFromNative function.
+ * 
+ * It is only needed to be done, because the data object is not available
+ * outside of emoji-mart.
+ *
+ * @public
+ * @param {string} emoji
+ * @param {string} design
+ * @param {Object} [data]
+ * @see https://github.com/missive/emoji-mart#get-emoji-data-from-native
+ * @returns {Object}
+ */
+function getEmojiDataFromNativeOverwrite(emoji, design, data = allEmojiData) {
+  getEmojiDataFromNative(emoji, design, data);
+}
+
 // export as global
 window.emojiMart = {
     definePicker,
     setDataStore,
-    getEmojiDataFromNative,
+    getEmojiDataFromNative: getEmojiDataFromNativeOverwrite,
     emojiIndex
 };
