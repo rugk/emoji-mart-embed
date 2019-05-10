@@ -29,6 +29,13 @@ module.exports = {
           use: {
             loader: 'babel-loader',
             options: {
+              presets: [
+                ["env", {
+                  "targets": {
+                    "browsers": ["firefox >= 63"]
+                  }
+                }]
+              ],
               plugins: [
                 [
                   'transform-react-remove-prop-types',
