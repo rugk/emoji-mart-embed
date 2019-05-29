@@ -82,7 +82,7 @@ function setDataStore(dataStore) {
  * @returns {Object}
  */
 function getEmojiDataFromNativeOverwrite(emoji, design, data = allEmojiData) {
-  getEmojiDataFromNative(emoji, design, data);
+    return getEmojiDataFromNative(emoji, design, data);
 }
 
 // export as global
