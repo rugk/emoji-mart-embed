@@ -14,16 +14,16 @@
   "license": "ISC",
   "dependencies": {
     "emoji-mart": "^2.11.1",
-    "preact": "^10.0.0-beta.1",
+    "preact": "^10.0.0-rc.1",
     "remount": "^0.9.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.4",
-    "babel-loader": "^8.0.5",
+    "@babel/core": "^7.6.0",
+    "babel-loader": "^8.0.6",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "file-loader": "^3.0.1",
     "npm-license-text": "^1.0.3",
-    "webpack": "^4.31.0",
-    "webpack-cli": "^3.3.2"
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.8"
   }
 }
