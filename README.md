@@ -18,6 +18,12 @@ npm run build
 For your convenience, the finished files are written into the [`dist`](dist) dir.
 All Emoji JSON data is included in the JS, and there is also the CSS file.
 
+To generate a file of all used licenses of the dependencies, do run:
+```
+npm install npm-license-text
+npx npm-license-text . THIRD_PARTY_LICENSES.md
+```
+
 ## Usage
 
 Include the JS and CSS.
