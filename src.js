@@ -37,8 +37,6 @@ async function definePicker(
           native: true,
           onSelect: emoji => console.log('emoji selected', emoji),
           title: 'Emoji',
-          showPreview: false,
-          showPreview: true,
           // passed to function
           ...properties,
           // manually set overwrite everything finally
