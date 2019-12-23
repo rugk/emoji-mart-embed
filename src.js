@@ -24,32 +24,32 @@ async function definePicker(
     properties = undefined,
     customAttributes = ["set", "native", "title", "showPreview"]
 ) {
-  const PickerPrepared = (interactiveProperties) => {
-    // filter null values
-    for (const element in interactiveProperties) {
-      if (interactiveProperties[element] === null) {
-        delete interactiveProperties[element];
-      }
+    const PickerPrepared = (interactiveProperties) => {
+        // filter null values
+        for (const element in interactiveProperties) {
+            if (interactiveProperties[element] === null) {
+                delete interactiveProperties[element];
+            }
+        }
+
+        return React.createElement(Picker, {
+          // defaults
+          native: true,
+          onSelect: emoji => console.log('emoji selected', emoji),
+          title: 'Emoji',
+          showPreview: false,
+          showPreview: true,
+          // passed to function
+          ...properties,
+          // manually set overwrite everything finally
+          ...interactiveProperties
+        });
     }
 
-    return React.createElement(Picker, {
-      // defaults
-      native: true,
-      onSelect: emoji => console.log('emoji selected', emoji),
-      title: 'Emoji',
-      showPreview: false,
-      showPreview: true,
-      // passed to function
-      ...properties,
-      // manually set overwrite everything finally
-      ...interactiveProperties
-    });
-  }
-
-  define({ [customElementName]: {
-    component: PickerPrepared,
-    attributes: customAttributes
-  }});
+    define({ [customElementName]: {
+        component: PickerPrepared,
+        attributes: customAttributes
+    }});
 }
 
 /**
@@ -70,7 +70,7 @@ function setDataStore(dataStore) {
 
 /**
  * Override real getEmojiDataFromNative function.
- * 
+ *
  * It is only needed to be done, because the data object is not available
  * outside of emoji-mart.
  *
