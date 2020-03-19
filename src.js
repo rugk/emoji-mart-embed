@@ -8,7 +8,7 @@
 import { Picker, store, emojiIndex, getEmojiDataFromNative } from 'emoji-mart/dist-modern/index.js'
 import allEmojiData from 'emoji-mart/data/all.json'
 import React from 'react'
-import { define } from 'remount/es6'
+import { define } from 'remount'
 
 /**
  * Create the HTML custom element for emoji-mart emoji picker.
