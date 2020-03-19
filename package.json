@@ -14,6 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "emoji-mart": "^3.0.0",
+    "npm-license-text": "^1.0.3",
     "preact": "^10.3.4",
     "remount": "^0.11.0"
   },
