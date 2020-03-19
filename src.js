@@ -1,5 +1,5 @@
 /**
- * Exports emoji-mart as a custom HTMl element.
+ * Exports emoji-mart as a custom HTML element.
  *
  * @public
  * @module emoji-mart-embed
