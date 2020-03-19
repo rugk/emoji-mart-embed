@@ -1,5 +1,7 @@
 # emoji-mart-embed
 
+![Node CI](https://github.com/rugk/emoji-mart-embed/workflows/Node%20CI/badge.svg)
+
 Provides [emoji-mart](https://github.com/missive/emoji-mart), so it can be used in plain JavaScript. This uses [remount](https://github.com/rstacruz/remount) and [preact](https://github.com/developit/preact).
 
 In the end, you just have a custom element:
