@@ -15,7 +15,7 @@
   "dependencies": {
     "emoji-mart": "^3.0.1",
     "npm-license-text": "^1.0.3",
-    "preact": "^10.5.12",
+    "preact": "^10.5.13",
     "remount": "^0.11.0"
   },
   "devDependencies": {
