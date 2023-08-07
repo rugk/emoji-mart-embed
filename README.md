@@ -1,3 +1,5 @@
+> **Archived:** The maintainance of this stopped. Emoji-mart itself now has/is a pure JS/CSS solution that can be embedded, so this is no longer needed.
+
 # emoji-mart-embed
 
 ![Node CI](https://github.com/rugk/emoji-mart-embed/workflows/Node%20CI/badge.svg)
